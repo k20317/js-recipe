@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <div>私の一番好きなアニメはなんでしょう？</div>
+  <button id="choice1">ONE PIECE</button>
+  <button id="choice2">僕のヒーローアカデミア</button>
+  <button id="choice3">約束のネバーランド</button>
+
+  <script>
+    const Button = document.getElementById("choice1")
+
+    const Button2 = document.getElementById("choice2")
+
+    const Button3 = document.getElementById("choice3")
+
+    Button.onclick = function() {
+      console.log("ブー！不正解！")
+    }
+
+    Button2.onclick = function() {
+      console.log("ピンポン！大正解！")
+    }
+    Button3.onclick = function() {
+      console.log("ブー！不正解！")
+    }
+  </script>
+</html>
+
+const Name = { name: 'いつき', university: '福岡大学', age: 21, hobby:
+['早寝早起き','バンド', 'ダンス動画をみる'], familly: { papa: 'かずひろ', mama:
+'しずか', sister:　'なつき', }, isMentor: true, sayHello: function () {
+alert(`こん版はー！${this.name}です!!`) }, } ​ console.log(Name.name)
+Name.sayHello()
