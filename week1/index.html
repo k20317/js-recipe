@@ -22,11 +22,40 @@
     Button3.onclick = function() {
       console.log("ブー！不正解！")
     }
-  </script>
-</html>
 
-const Name = { name: 'いつき', university: '福岡大学', age: 21, hobby:
-['早寝早起き','バンド', 'ダンス動画をみる'], familly: { papa: 'かずひろ', mama:
-'しずか', sister:　'なつき', }, isMentor: true, sayHello: function () {
-alert(`こん版はー！${this.name}です!!`) }, } ​ console.log(Name.name)
-Name.sayHello()
+    const FizzBuzz = function(number) {
+      for (let n = 1; n <= number; n++) {
+        if (n % 5 === 0 && n % 3 === 0) {
+          console.log("FizzBuzz")
+        } else if (n % 5 === 0) {
+          console.log("Buzz")
+        } else if (n % 3 === 0) {
+          console.log("Fizz")
+        } else {
+          console.log(n)
+        }
+      }
+    }
+    FizzBuzz(100)
+  </script>
+
+  <!-- 自己紹介！ -->
+  <!-- const Name = {
+    name: 'いつき',
+    university: '福岡大学',
+    age: 21,
+    hobby: ['早寝早起き','バンド', 'ダンス動画をみる'],
+    familly: {
+      papa: 'かずひろ',
+      mama: 'しずか',
+      sister:　'なつき',
+    },
+    isMentor: true,
+    sayHello: function () {
+      alert(`こんばんはー！${this.name}です!!`)
+    },
+  }
+  ​
+  console.log(Name.name)
+  Name.sayHello() -->
+</html>
