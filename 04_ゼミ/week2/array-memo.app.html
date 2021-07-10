@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <input id="memo-input" />
+    <button id="add-button">保存</button>
+    <div id="memo-container"></div>
+
+    <script>
+      // 要素取得
+      //Javaは名前大文字！
+      const Input = document.getElementById("memo-input")
+      const Button = document.getElementById("add-button")
+      const Container = document.getElementById("memo-container")
+      let memos = []
+
+      Button.onclick = function() {
+        console.log("推された")
+        // inputの内容をmemosに追加する。
+        memos.push(Input.value)
+        //console.dir();
+        console.log(memos)
+
+        Container.innerHTML = ""
+        for (let i = 0; i < memos.length; i++) {
+          const todo = document.createElement("div")
+          todo.textContent = memos[i]
+          Container.append(todo)
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- === このメッセージは消しても構いません === -->
+
+<!-- GeekSalon WebExpertコースのペアプロで使用するためのテンプレートです。 -->
+<!-- ✅ 👈のメニューから一番下の「👬」のアイコンを選んで -->
+<!--    Live Modeを「Everyone cab edit」に変更した後、 -->
+<!--    「You're live!」の下、「Stop Session」の上、にあるリンクをShareしましょう -->
+<!-- ✅ CodeSandBoxはVS Codeとほぼ同じ様に扱えます。 -->
+<!-- ✅ 👉にある画面が実行画面です。 -->
+<!-- ✅ 👉の👇にある「Console」が実行時のConsoleになります。 -->
+<!--    たまに挙動がおかしい時があるので気をつけましょう。 -->
+
+<!-- =============================== -->
