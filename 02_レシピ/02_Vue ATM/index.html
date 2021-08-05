@@ -4,26 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>quizu</title>
+    <title>ATM</title>
   </head>
   <body>
     <div id="v-model">
-      <h3>入力画面</h3>
-      <input type="number" v-model="nyuryokugaku" />
-      <div>入力額：{{ nyuryokugaku}}円</div>
-      <button v-on:click="nyukin">入金</button>
-      <button v-on:click="shukkin" v-bind:disabled="difference<0">出金</button>
+      <section class="nyuuryoku">
+        <h3>入力画面</h3>
+        <input type="number" v-model="nyuuryokugaku" />
+        <div>入力額：{{ nyuuryokugaku}}円</div>
+        <button v-on:click="nyuukin">入金</button>
+        <button v-on:click="shukkin">出金</button>
+      </section>
 
-      <h3>口座残高</h3>
-      <div>残高：{{ zandaka }}円</div>
-      <h3>取引記録</h3>
-      <div v-for="log in logs">
-        日付：{{log.data}}<br />
-        操作:{{log.type}}<br />
-        金額:{{log.money}}
-      </div>
+      <section class="zandaka">
+        <h3>口座残高</h3>
+        <div>残高：{{ zandaka }}円</div>
+      </section>
+
+      <section class="logs">
+        <h3>取引記録</h3>
+        <div v-for="log in logs">
+          {{ log }}
+          <!-- <div>操作:{{log.type}}</div>
+        <div>金額:{{log.money}}</div> -->
+        </div>
+      </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script src="main.js"></script>
 </html>
